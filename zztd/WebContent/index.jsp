@@ -14,41 +14,7 @@
  </head> 
  <body> 
 <s:include value="front/header.jsp"></s:include>
- <!-- 
-  <div class="topDiv"> 
-   <div class="logoDiv">
-	 <a class="qltd-logo" href="#"></a>
-	 <ul class="login_div">
-		<li class="login-btn"><a href="front/login.jsp">登录</a></li>
-		<li><a href="front/register.jsp">免费注册</a></li>
-	 </ul>
-   </div> 
-   <div class="nav" id="xcx_tabmenu"> 
-    <div class="cx_tabmenu" id="cx_tabmenu"> 
-     <div class="lev_1" id="ddimagetabs"> 
-      <ul> 
-       <li> <a id="sclink1" href="#" target="_blank">首页</a> </li> 
-	   <li> <a id="sclink3" href="#" target="_blank">我要贷款</a> </li> 
-       <li> <a id="sclink2" href="#" target="_blank">我要理财</a> </li> 
-       <li> <a id="sclink4" href="#" target="_blank">我的账号</a> </li> 
-       <li> <a id="sclink5" href="#" target="_blank">咨询服务</a> </li> 
-       <li> <a id="sclink6" href="#" target="_blank">社区论坛</a> </li> 
-      </ul> 
-     </div> 
-     <div class="lev_2" id="tabcontentcontainer"> 
-      <div class="tabcontent" id="sc1"> 
-       <ul> 
-        <li> <a href="#" target="_blank">关于我们</a> </li> 
-        <li> <a href="#" target="_blank">法律政策</a> </li> 
-        <li> <a href="#" target="_blank">联系我们</a> </li> 
-        <li> <a href="#" target="_blank">收费标准</a> </li> 
-        <li> <a href="#" target="_blank">新闻动态</a> </li> 
-       </ul> 
-      </div> 
-     </div> 
-    </div> 
-   </div>
-  </div>
+
   <div class="centerDiv">
       <div class="leftDiv">
           <div id="focus">
@@ -256,7 +222,7 @@
             </div>
         </div>
 </div>
- -->
+<script type="text/javascript" src="${contextPath}/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
 $(function() {
 	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
