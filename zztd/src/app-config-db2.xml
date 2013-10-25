@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<bean id="myDataSource_2" class="org.springframework.jdbc.datasource.DriverManagerDataSource"  >
+   		 <property name="driverClassName">
+             <value>org.logicalcobwebs.proxool.ProxoolDriver</value>
+         </property>
+         <property name="url">
+             <value>proxool.hoorayos_zz</value>
+         </property>
+	</bean>
+	
+	<bean id="sqlSessionFactory_2" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource_2" />
+		<property name="typeAliasesPackage" value="com.team" /> 
+		<property name="plugins">  
+	       <list>  
+	          <!-- 配置自己实现的分页插件-->  
+	          <bean class="com.core.util.PagingPlugin">  
+	            <property name="dialect" value="mysql"/>  
+	          </bean>
+	        </list>  
+	    </property> 
+	</bean>
+
+	<!-- 注册Mapper方式二：也可不指定特定mapper，而使用自动扫描包的方式来注册各种Mapper ，配置如下：-->
+	<bean name="mapperScannerConfigurer_2" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.team.*.persistence" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory_2"/>
+	</bean>
+
+	<bean id="transactionManager_2"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="myDataSource_2" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager_2" />
+
+</beans>
