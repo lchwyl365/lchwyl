@@ -5,16 +5,16 @@
    	<s:if test="null == #session.sysUser">
 	 <ul class="login_div">
 	    <li class="login-btn" style="padding-right:10px;">您好，欢迎来到众智团贷网</li>
-		<li class="login-btn"><a href="front/web_inputLogin.action?srcurl=index.jsp">登录</a></li>
+		<li class="login-btn"><a href="${contextPath}/front/web_inputLogin.action?srcurl=index.jsp">登录</a></li>
 		<li><a href="front/register.jsp">免费注册</a></li>
 	 </ul>
 	 </s:if>
 	<s:else>
 		<ul class="login_div">
-		    <li class="login-btn" ><a href="#">${session.sysUser.username}</a></li>
-			<li class="login-btn"><a href="front/web_inputLogin.action?srcurl=index.jsp">消息</a></li>
-			<li class="login-btn"><a href="front/register.jsp">提醒</a></li>
-			<li><a href="front/register.jsp">退出</a></li>
+		    <li class="login-btn" ><a href="myaccount/index.jsp">${session.sysUser.username}</a></li>
+			<li class="login-btn"><a href="#">消息</a></li>
+			<li class="login-btn"><a href="#">提醒</a></li>
+			<li><a href="#">退出</a></li>
 		 </ul>
 	</s:else>
    </div>

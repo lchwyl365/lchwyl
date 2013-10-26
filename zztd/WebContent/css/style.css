@@ -77,7 +77,7 @@ img {
 }
 .nav .lev_1
 {
-	height: 40px;
+	height: 43px;
 	overflow: hidden;
 	display: block;
 }
@@ -99,19 +99,11 @@ img {
 	height: 38px;
 	color: #fff;
 	line-height: 38px;
-	padding-top: 0px;
-	padding-right: 25px;
-	padding-bottom: 5px;
-	padding-left: 25px;
-	font-family: Helvetica, Tahoma, Arial, sans-serif;
-	font-size: 14px;
+	padding: 0px 25px 0px 25px;
+    font: 16px/35px "微软雅黑",tahoma;
 	font-style: normal;
-	font-variant: normal;
-	font-weight: bold;
 	text-decoration: none;
 	display: inline-block;
-	font-size-adjust: none;
-	font-stretch: normal;
 }
 .nav .lev_1 li a.current {
     background: url("../img/arrow_nav_drop.gif") no-repeat scroll center 0 transparent !important;
@@ -123,8 +115,8 @@ img {
 }
 .nav .lev_2
 {
-	height: 27px;
-	line-height: 27px;
+	height: 22px;
+	line-height: 22px;
 	overflow: hidden;
 	display: block;
 }
@@ -146,7 +138,7 @@ img {
 }
 .nav .lev_2 li a
 {
-	height: 27px;
+	height: 22px;
 	color: #333;
 	padding-top: 0px;
 	padding-right: 25px;
@@ -154,6 +146,11 @@ img {
 	padding-left: 25px;
 	text-decoration: none;
 	display: inline-block;
+	font: 13px/22px "微软雅黑",tahoma;
+	font-style: normal;
+}
+.nav .lev_2 li a:hover{
+	color: #AE0E15;
 }
 .nav .lev_2 #sc2
 {

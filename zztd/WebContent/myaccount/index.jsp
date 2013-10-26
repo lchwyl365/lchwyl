@@ -8,234 +8,94 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
-  <title>zhongzhituandai网 我的账号</title> 
+  <title>zhongzhituandai网</title> 
 <link href="${contextPath}/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/progress.js"></script>
+<script  src="${contextPath}/js/progress.js" type="text/javascript"></script>
+<style>
+.menu-div{overflow:hidden;}
+h2 {
+    background: url("${contextPath}/img/menu_bg.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
+    border: 1px solid #E3E3E3;
+    color: #666666;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    
+}
+.menu-div h2 {
+    color: #454545;
+    font: 16px/36px Microsoft YaHei,tahoma;
+    font-weight: 500;
+}
+.menu-div .border {
+    border-bottom-style: none;
+    padding: 0;
+}
+.border {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #E3E3E3;
+    border-image: none;
+    border-right: 1px solid #E3E3E3;
+    border-style: none solid solid;
+    border-width: 1px;
+    height: 1%;
+    padding: 10px;
+}
+.menu-div ul {
+    padding: 3px 0;
+}
+.menu-div ul li {
+}
+.menu-div ul li img {
+    vertical-align: middle;
+}
+.menu-div ul li a {
+    border-bottom: 1px dashed #DCDCDC;
+    color: #666666;
+    display: block;
+    height: 30px;
+    margin: 0 3px;
+    padding: 0 7px;
+    font: 14px/30px Microsoft YaHei,tahoma;
+}
+.menu-div ul li a:hover {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-bottom: 1px dashed #FF6600;
+    color: #FF6600;
+}
+.menu-div ul li a.Current {
+    background: none repeat scroll 0 0 #FF6600;
+    border-bottom: 1px solid #FF6600;
+    color: #FFFFFF;
+}
+</style>
  </head> 
  <body> 
-<s:include value="front/header.jsp"></s:include>
+<s:include value="../front/header.jsp"></s:include>
 
- <!-- 
-  <div class="topDiv"> 
-   <div class="logoDiv">
-	 <a class="qltd-logo" href="#"></a>
-	 <ul class="login_div">
-		<li class="login-btn"><a href="front/login.jsp">登录</a></li>
-		<li><a href="front/register.jsp">免费注册</a></li>
-	 </ul>
-   </div> 
-   <div class="nav" id="xcx_tabmenu"> 
-    <div class="cx_tabmenu" id="cx_tabmenu"> 
-     <div class="lev_1" id="ddimagetabs"> 
-      <ul> 
-       <li> <a id="sclink1" href="#" target="_blank">首页</a> </li> 
-	   <li> <a id="sclink3" href="#" target="_blank">我要贷款</a> </li> 
-       <li> <a id="sclink2" href="#" target="_blank">我要理财</a> </li> 
-       <li> <a id="sclink4" href="#" target="_blank">我的账号</a> </li> 
-       <li> <a id="sclink5" href="#" target="_blank">咨询服务</a> </li> 
-       <li> <a id="sclink6" href="#" target="_blank">社区论坛</a> </li> 
-      </ul> 
-     </div> 
-     <div class="lev_2" id="tabcontentcontainer"> 
-      <div class="tabcontent" id="sc1"> 
-       <ul> 
-        <li> <a href="#" target="_blank">关于我们</a> </li> 
-        <li> <a href="#" target="_blank">法律政策</a> </li> 
-        <li> <a href="#" target="_blank">联系我们</a> </li> 
-        <li> <a href="#" target="_blank">收费标准</a> </li> 
-        <li> <a href="#" target="_blank">新闻动态</a> </li> 
-       </ul> 
-      </div> 
-     </div> 
-    </div> 
-   </div>
-  </div>
   <div class="centerDiv">
-      <div class="leftDiv">
-          <div id="focus">
+      <div class="leftDiv" style="width:180px;min-height:400px;">
+          <div id="no1" class="menu-div">
+            <h2><span>投资管理</span></h2>
+            <div class="border">
                 <ul>
-                    <li><a href="#" target="_blank"><img src="img/slide-1.jpg" /></a></li>
-                    <li><a href="#" target="_blank"><img src="img/slide-2.jpg"  /></a></li>
+                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aInvest" href="/Loan/Default.aspx">我要投资</a></li>
+                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAutoBid" href="AutoBid.aspx">自动投标设置<img src="/images/new.png"></a></li>
+                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">自动投标统计</a></li>
+                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aSucceedList" href="SucceedList.aspx">已成功投资的借款</a></li>
+                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aCanSubjectTrans" href="CanSubjectTrans.aspx">待收款债权转让</a></li>
+                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAttentionList" href="AttentionList.aspx">我关注的借款</a></li>
+                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aLeaveWordBorrower" href="LeaveWord_Borrower.aspx">贷款者回复</a></li>
                 </ul>
-          </div>
-          <div class="borrowList">
-          	 <div class="tit_2"><h3>最新借款列表</h3></div>
-             <div class="item">
-             	<div class="item_headimg">
-                	<img src="img/img1.jpg">
-                </div>
-                <div class="item_info">
-                	<div class="item_row"><a href="#">天猫大卖家，资金周转</a></div>
-                    <div class="item_row">
-                    	<div class="span1">借款金额:<span class="mon">￥11000 元</span></div>
-                        <div class="span2">年利率:<span class="rate">10%</span></div>
-                        <div class="span2">借款期限:1个月</div>
-                    </div>
-                    <div class="item_row">
-                    	<div class="span1">信用等级：<img src="img/medal1.gif" />&nbsp;<img src="img/medal1.gif" /></div>
-                        <div class="span3">贷款进度:&nbsp;&nbsp;<script>display ('element4',80,4);</script>&nbsp;&nbsp;已完成7笔投标</div>
-                    </div>
-                </div>
-             </div>
-             <div class="item">
-             	<div class="item_headimg">
-                	<img src="img/img1.jpg">
-                </div>
-                <div class="item_info">
-                	<div class="item_row"><a href="#">天猫大卖家，资金周转</a></div>
-                    <div class="item_row">
-                    	<div class="span1">借款金额:<span class="mon">￥11000 元</span></div>
-                        <div class="span2">年利率:<span class="rate">10%</span></div>
-                        <div class="span2">借款期限:1个月</div>
-                    </div>
-                    <div class="item_row">
-                    	<div class="span1">信用等级：<img src="img/medal1.gif" />&nbsp;<img src="img/medal1.gif" /></div>
-                        <div class="span3">贷款进度:&nbsp;&nbsp;<script>display ('element4',60,4);</script>&nbsp;&nbsp;已完成7笔投标</div>
-                    </div>
-                </div>
-             </div>
-             <div class="item">
-             	<div class="item_headimg">
-                	<img src="img/img1.jpg">
-                </div>
-                <div class="item_info">
-                	<div class="item_row"><a href="#">天猫大卖家，资金周转</a></div>
-                    <div class="item_row">
-                    	<div class="span1">借款金额:<span class="mon">￥11000 元</span></div>
-                        <div class="span2">年利率:<span class="rate">10%</span></div>
-                        <div class="span2">借款期限:1个月</div>
-                    </div>
-                    <div class="item_row">
-                    	<div class="span1">信用等级：<img src="img/medal1.gif" style="width:16px"/>&nbsp;<img src="img/medal1.gif" style="width:16px"/></div>
-                        <div class="span3">贷款进度</div>
-                    </div>
-                </div>
-             </div>
-             <div class="item">
-             	<div class="item_headimg">
-                	<img src="img/img1.jpg">
-                </div>
-                <div class="item_info">
-                	<div class="item_row"><a href="#">天猫大卖家，资金周转</a></div>
-                    <div class="item_row">
-                    	<div class="span1">借款金额:<span class="mon">￥11000 元</span></div>
-                        <div class="span2">年利率:<span class="rate">10%</span></div>
-                        <div class="span2">借款期限:1个月</div>
-                    </div>
-                    <div class="item_row">
-                    	<div class="span1">信用等级：<img src="img/medal1.gif" style="width:16px"/>&nbsp;<img src="img/medal1.gif" style="width:16px"/></div>
-                        <div class="span3">贷款进度</div>
-                    </div>
-                </div>
-             </div>
-             <div class="item">
-             	<div class="item_headimg">
-                	<img src="img/img1.jpg">
-                </div>
-                <div class="item_info">
-                	<div class="item_row"><a href="#">天猫大卖家，资金周转</a></div>
-                    <div class="item_row">
-                    	<div class="span1">借款金额:<span class="mon">￥11000 元</span></div>
-                        <div class="span2">年利率:<span class="rate">10%</span></div>
-                        <div class="span2">借款期限:1个月</div>
-                    </div>
-                    <div class="item_row">
-                    	<div class="span1">信用等级：<img src="img/medal1.gif" style="width:16px"/>&nbsp;<img src="img/medal1.gif" style="width:16px"/></div>
-                        <div class="span3">贷款进度</div>
-                    </div>
-                </div>
-             </div>
-             <div class="item">
-             	<div class="item_headimg">
-                	<img src="img/img1.jpg">
-                </div>
-                <div class="item_info">
-                	<div class="item_row"><a href="#">天猫大卖家，资金周转</a></div>
-                    <div class="item_row">
-                    	<div class="span1">借款金额:<span class="mon">￥11000 元</span></div>
-                        <div class="span2">年利率:<span class="rate">10%</span></div>
-                        <div class="span2">借款期限:1个月</div>
-                    </div>
-                    <div class="item_row">
-                    	<div class="span1">信用等级：<img src="img/medal1.gif" style="width:16px"/>&nbsp;<img src="img/medal1.gif" style="width:16px"/></div>
-                        <div class="span3">贷款进度</div>
-                    </div>
-                </div>
-             </div>
-             <div class="item">
-             	<div class="item_headimg">
-                	<img src="img/img1.jpg">
-                </div>
-                <div class="item_info">
-                	<div class="item_row"><a href="#">天猫大卖家，资金周转</a></div>
-                    <div class="item_row">
-                    	<div class="span1">借款金额:<span class="mon">￥11000 元</span></div>
-                        <div class="span2">年利率:<span class="rate">10%</span></div>
-                        <div class="span2">借款期限:1个月</div>
-                    </div>
-                    <div class="item_row">
-                    	<div class="span1">信用等级：<img src="img/medal1.gif" style="width:16px"/>&nbsp;<img src="img/medal1.gif" style="width:16px"/></div>
-                        <div class="span3">贷款进度</div>
-                    </div>
-                </div>
-             </div>
-          </div>
+            </div>
+        </div>
 	  </div>
 	  <div class="rightDiv">
-      	  <div class="numDiv">
-                <div class="contentTitle">经验丰富的回报</div>
-                <div class="contentBody">
-                    <div class="cloumn1">
-                        <div class="num">9</div>
-                        <div class="symbol">.</div>
-                        <div class="num">0</div>
-                        <div class="num">9</div>
-                        <div class="symbol">%</div>
-                    </div>
-                    <div>
-                        <a href="#">了解更多</a>
-                    </div>
-                </div>
-                <div class="contentTitle">最好的贷款利率</div>
-                <div class="contentBody">
-                    <div class="cloumn1">
-                        <div class="num">9</div>
-                        <div class="symbol">.</div>
-                        <div class="num">0</div>
-                        <div class="num">9</div>
-                        <div class="symbol">%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="notice_list">
-            	<div class="tit_2"><h3>最新公告</h3></div>
-                <ul>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="移动iOS 7的是与非">移动周报：疯狂吐槽还是更得欢非</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="国内开源项目集锦">国内最受欢迎的开源项目集锦</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="开注意的十件事">开始3D编程前需注意的十件事</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="，保养好，活得长，死得快">基因大数据将改变人类未来：死得快</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="频分享领域的鸡肋">短视频，并非是移动视领域的鸡肋</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="trunk-based开发">产品，LinkedIn的trunk-based开发</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="美国白宫任命Twitterong为副CTO">美国白tter法务ong为副CTO</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="移动竞争是：设计的竞争">移动互联网最核心的竞设计的竞争</a></li>
-        		</ul>
-                <a class="more" target="_blank" href="#">更多</a>
-            </div>
-            <div class="notice_list">
-            	<div class="tit_2"><h3>资讯</h3></div>
-                <ul>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="移动iOS 7的是与非">移动周报：疯狂吐槽还是更得欢非</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="国内开源项目集锦">国内最受欢迎的开源项目集锦</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="开注意的十件事">开始3D编程前需注意的十件事</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="，保养好，活得长，死得快">基因大数据将改变人类未来：死得快</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="频分享领域的鸡肋">短视频，并非是移动视领域的鸡肋</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="trunk-based开发">产品，LinkedIn的trunk-based开发</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="美国白宫任命Twitterong为副CTO">美国白tter法务ong为副CTO</a></li>
-                    <li><a onclick="LogClickCount(this,330);" target="_blank" href="#" title="移动竞争是：设计的竞争">移动互联网最核心的竞设计的竞争</a></li>
-        		</ul>
-                <a class="more" target="_blank" href="#">更多</a>
-            </div>
-	  </div>
+     </div>
   </div>
   <div class="foot">
         <div class="new_footer">
@@ -257,7 +117,7 @@
             </div>
         </div>
 </div>
- -->
+<script type="text/javascript" src="${contextPath}/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
 $(function() {
 	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
@@ -322,6 +182,8 @@ $(function() {
 		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
 		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
 	}
+	/**当前一级菜单**/
+	$("#sclink4").addClass("current");
 });
 </script>
  </body>
