@@ -12,21 +12,24 @@
 <link href="${contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 <script  src="${contextPath}/js/progress.js" type="text/javascript"></script>
 <style>
-.menu-div{overflow:hidden;}
+.menu-div{overflow:hidden;border-radius: 2px;}
 h2 {
     background: url("${contextPath}/img/menu_bg.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
     border: 1px solid #E3E3E3;
-    color: #666666;
+    border-bottom: 1px solid #AE0E15;
+    color: #fff;
     height: 36px;
     line-height: 36px;
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 20px;
     
 }
 .menu-div h2 {
-    color: #454545;
+	/*background: none repeat scroll 0 0 #AE0E15;*/
+    color: #333;
     font: 16px/36px Microsoft YaHei,tahoma;
     font-weight: 500;
+    text-align:left;
 }
 .menu-div .border {
     border-bottom-style: none;
@@ -46,30 +49,39 @@ h2 {
     padding: 10px;
 }
 .menu-div ul {
-    padding: 3px 0;
+    padding: 0px;
 }
 .menu-div ul li {
+	border-left: 1px solid #E3E3E3;
+	border-right: 1px solid #E3E3E3;
+}
+.menu-div ul li:hover {
+	border-left: 1px solid #DD4B39;
+	border-right: 1px solid #E3E3E3;
 }
 .menu-div ul li img {
     vertical-align: middle;
 }
 .menu-div ul li a {
-    border-bottom: 1px dashed #DCDCDC;
+    border-left: 2px solid #fff;
+    border-bottom: 1px solid #ECECEC;
     color: #666666;
     display: block;
-    height: 30px;
-    margin: 0 3px;
-    padding: 0 7px;
-    font: 14px/30px Microsoft YaHei,tahoma;
+    height: 35px;
+    margin: 0px;
+    padding-left:20px;
+    font: 14px/35px Microsoft YaHei,tahoma;
+    text-align:left;
 }
 .menu-div ul li a:hover {
     background: none repeat scroll 0 0 #F8F8F8;
-    border-bottom: 1px dashed #FF6600;
-    color: #FF6600;
+    border-left: 2px solid #DD4B39;
+    border-bottom: 1px solid #ECECEC;
+    color: #DD4B39;
 }
 .menu-div ul li a.Current {
-    background: none repeat scroll 0 0 #FF6600;
-    border-bottom: 1px solid #FF6600;
+    background: none repeat scroll 0 0 #DD4B39;
+    border-bottom: 1px solid #ECECEC;
     color: #FFFFFF;
 }
 </style>
@@ -79,20 +91,42 @@ h2 {
 
   <div class="centerDiv">
       <div class="leftDiv" style="width:180px;min-height:400px;">
-          <div id="no1" class="menu-div">
-            <h2><span>投资管理</span></h2>
-            <div class="border">
-                <ul>
-                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aInvest" href="/Loan/Default.aspx">我要投资</a></li>
-                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAutoBid" href="AutoBid.aspx">自动投标设置<img src="/images/new.png"></a></li>
-                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">自动投标统计</a></li>
-                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aSucceedList" href="SucceedList.aspx">已成功投资的借款</a></li>
-                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aCanSubjectTrans" href="CanSubjectTrans.aspx">待收款债权转让</a></li>
-                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAttentionList" href="AttentionList.aspx">我关注的借款</a></li>
-                    <li><a id="ctl00_ctl00_ContentPlaceHolder1_aLeaveWordBorrower" href="LeaveWord_Borrower.aspx">贷款者回复</a></li>
-                </ul>
-            </div>
-        </div>
+         <div id="no1" class="menu-div">
+            <h2><span>资金管理</span></h2>
+            <ul>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aInvest" href="/Loan/Default.aspx">充值提现</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAutoBid" href="AutoBid.aspx">资金记录</a></li>
+             </ul>
+             <h2 style="border-top:#fff;"><span>投资管理</span></h2>
+            <ul>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aInvest" href="/Loan/Default.aspx">我要投资</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAutoBid" href="AutoBid.aspx">自动投标</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">投资统计</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aSucceedList" href="SucceedList.aspx">投资等级</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aCanSubjectTrans" href="CanSubjectTrans.aspx">回款明细</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAttentionList" href="AttentionList.aspx">我的逾期</a></li>
+             </ul>
+             <h2 style="border-top:#fff;"><span>借款管理</span></h2>
+            <ul>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aInvest" href="/Loan/Default.aspx">已发布借款</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAutoBid" href="AutoBid.aspx">偿还借款</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">信用评级与额度</a></li>
+             </ul>
+             <h2 style="border-top:#fff;"><span>个人设置</span></h2>
+            <ul>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aInvest" href="/Loan/Default.aspx">个人资料</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aAutoBid" href="AutoBid.aspx">更换头像</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">提醒设置</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">认证中心</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">资料证明</a></li>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_AutoBidStats" href="AutoBidStats.aspx">修改密码</a></li>
+             </ul>
+             <h2 style="border-top:#fff;"><span>好友中心</span></h2>
+            <ul>
+                <li><a id="ctl00_ctl00_ContentPlaceHolder1_aInvest" href="/Loan/Default.aspx">邀请好友</a></li>
+             </ul>
+         </div>
+         
 	  </div>
 	  <div class="rightDiv">
      </div>

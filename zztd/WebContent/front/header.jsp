@@ -26,7 +26,7 @@
            <a target="_blank" href="http://weibo.com/tuandai">
                  <img alt="众智团贷网微博" style="" src="http://image.tuandai.com/img/minweibo.jpg">&nbsp;众智团贷网微博</a>&nbsp;&nbsp;&nbsp;官方QQ群&nbsp;140467403</div> -->   
          <div class="right_xinxi_02">
-             <img src="http://image.tuandai.com/img/mintel.jpg" alt="众智团贷网电话">&nbsp;4006410888
+             <img src="${contextPath}/img/mintel.jpg" alt="众智团贷网电话">&nbsp;4006410888
              &nbsp;工作时间：周一至周日 08:30-17:30</div>
      </div>
    </div> 
@@ -37,7 +37,7 @@
        <li> <a id="sclink1" href="#" target="_blank">首页</a> </li> 
 	   <li> <a id="sclink3" href="#" target="_blank">我要贷款</a> </li> 
        <li> <a id="sclink2" href="#" target="_blank">我要理财</a> </li> 
-       <li> <a id="sclink4" href="#" target="_blank">我的账号</a> </li> 
+       <li> <a id="sclink4" href="${contextPath}/myaccount/index.jsp" target="_blank">我的账号</a> </li> 
        <li> <a id="sclink5" href="#" target="_blank">咨询服务</a> </li> 
        <li> <a id="sclink6" href="#" target="_blank">社区论坛</a> </li> 
       </ul> 
